@@ -4,8 +4,24 @@
   "description": "telegram bot",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint",
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Svitlana Yefremova",
+  "license": "ISC",
+  "dependencies": {
+    "add": "^2.0.6",
+    "cheerio": "^1.0.0-rc.2",
+    "dotenv": "^6.1.0",
+    "node-telegram-bot-api": "^0.30.0",
+    "nodemon": "^1.18.5",
+    "request": "^2.88.0",
+    "yarn": "^1.12.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  }
 }
