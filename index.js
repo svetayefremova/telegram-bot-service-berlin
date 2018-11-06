@@ -28,7 +28,6 @@ const parsePage = (data, output = [], isNextPage = false) => {
   if (!isNextPage) {
     $('.calendar-month-table').each((i, elem) => {
       const $month = $(elem).find('.month');
-      // const booked = $(elem).find('.nichtbuchbar');
       const notBooked = $(elem).find('.buchbar');
       notBooked.each((index, el) => {
         const date = `${$(el).text()} ${$month.text()}`;
@@ -37,7 +36,6 @@ const parsePage = (data, output = [], isNextPage = false) => {
     });
   } else {
     const $month = $('.calendar-month-table').last().find('.month');
-    // const booked = $('.calendar-month-table').last().find('.nichtbuchbar');
     const notBooked = $('.calendar-month-table').last().find('.buchbar');
     notBooked.each((index, el) => {
       const date = `${$(el).text()} ${$month.text()}`;
@@ -83,4 +81,4 @@ setInterval(() => {
       }, nextPagePath);
     }
   }, PATH);
-}, 60000);
+}, 15 * 60000);
