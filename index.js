@@ -16,7 +16,8 @@ const getPage = (cb, path) => {
     if (!error) {
       cb(body);
     } else {
-      // console.error('Error', error);
+      // eslint-disable-next-line
+      console.error('Error', error);
     }
   });
 };
